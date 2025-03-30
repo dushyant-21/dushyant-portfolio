@@ -39,6 +39,13 @@
       color: white;
       font-size: 36px;
       font-weight: bold;
+      overflow: hidden;
+    }
+    
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
     h1 {
@@ -64,6 +71,18 @@
     .contact-info div {
       display: flex;
       align-items: center;
+    }
+    
+    .contact-info a {
+      color: #555;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    
+    .contact-info a:hover {
+      color: #2e86ff;
+      text-decoration: underline;
     }
     
     .section {
@@ -183,6 +202,30 @@
       font-weight: bold;
       margin-bottom: 5px;
     }
+    
+    .download-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2e86ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    
+    .download-button:hover {
+      background-color: #1c6bdf;
+    }
+    
+    @media print {
+      .download-button {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -191,13 +234,16 @@
       <h1>DUSHYANT SRIVASTAVA</h1>
       <div class="job-title">Salesforce Technical Architect</div>
       <div class="contact-info">
-        <div>📞 +91-8224948060</div>
-        <div>📧 dushyant.srivastava21@gmail.com</div>
-        <div>🔗 https://linkedin.com/in/dushyant-srivastava</div>
+        <div><a href="tel:+918224948060">📞 +91-8224948060</a></div>
+        <div><a href="mailto:dushyant.srivastava21@gmail.com">📧 dushyant.srivastava21@gmail.com</a></div>
+        <div><a href="https://linkedin.com/in/dushyant-srivastava" target="_blank">🔗 https://linkedin.com/in/dushyant-srivastava</a></div>
         <div>📍 Noida, India</div>
       </div>
     </div>
-    <div class="profile-image">DS</div>
+    <div class="profile-image" id="profile-container">
+      <!-- The initials are shown as default, will be replaced by image if it loads successfully -->
+      <span id="initials">DS</span>
+    </div>
   </div>
   
   <div class="two-columns">
@@ -318,12 +364,38 @@
           </div>
         </div>
       </div>
-
-      <div class="section">
-      <h2 class="section-title">Download Resume</h2>
-        <a href="path/to/your/resume.pdf" class="resume-link" download>Download Resume</a>
-      </div>
     </div>
   </div>
+  
+  <button class="download-button" onclick="printResume()">Download Resume</button>
+  
+  <script>
+    // Function to try loading the image and display initials if it fails
+    function loadProfileImage() {
+      const imgPath = "path/to/your/profilepic.jpeg";
+      const container = document.getElementById('profile-container');
+      const initials = document.getElementById('initials');
+      
+      const img = new Image();
+      img.onload = function() {
+        // If image loads successfully, replace initials with image
+        initials.style.display = 'none';
+        container.appendChild(img);
+      };
+      img.onerror = function() {
+        // If image fails to load, keep showing initials (already the default)
+        initials.style.display = 'block';
+      };
+      img.src = imgPath;
+    }
+    
+    // Function to print/download the resume
+    function printResume() {
+      window.print();
+    }
+    
+    // Call the function when page loads
+    window.onload = loadProfileImage;
+  </script>
 </body>
 </html>
