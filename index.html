@@ -3,173 +3,327 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dushyant Srivastava - Salesforce Developer Portfolio</title>
+  <title>Dushyant Srivastava - Salesforce Technical Architect</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    body {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .profile-info {
+      flex: 1;
+    }
+    
+    .profile-image {
+      width: 80px;
+      height: 80px;
+      background-color: #2e86ff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .job-title {
+      color: #2e86ff;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+      color: #555;
+    }
+    
+    .contact-info div {
+      display: flex;
+      align-items: center;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    
+    .summary-text {
+      color: #333;
+      line-height: 1.5;
+    }
+    
+    .job-title-experience {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .company {
+      color: #2e86ff;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    
+    .date {
+      color: #555;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    
+    .job-description {
+      color: #444;
+      margin-bottom: 10px;
+    }
+    
+    ul {
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    li {
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    
+    .education-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .university {
+      color: #2e86ff;
+      margin-bottom: 5px;
+    }
+    
+    .two-columns {
+      display: flex;
+      gap: 40px;
+    }
+    
+    .left-column {
+      flex: 6;
+    }
+    
+    .right-column {
+      flex: 4;
+    }
+    
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .skill {
+      background-color: #f5f5f5;
+      padding: 5px 15px;
+      border-radius: 4px;
+      font-size: 14px;
       color: #333;
     }
-    header {
-      background: #0077b5;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
+    
+    .certification {
+      color: #2e86ff;
+      margin-bottom: 10px;
+      font-size: 15px;
     }
-    header h1 {
-      margin: 0;
+    
+    .achievement {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
     }
-    header p {
-      margin: 5px 0;
+    
+    .achievement-icon {
+      color: #2e86ff;
+      font-size: 24px;
+      margin-right: 10px;
+      flex-shrink: 0;
     }
-    .container {
-      width: 80%;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    .achievement-text {
+      flex: 1;
     }
-    h2 {
-      color: #0077b5;
-      border-bottom: 2px solid #0077b5;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    ul li {
-      background: #e4e4e4;
-      margin: 5px 0;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    a {
-      color: #0077b5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .resume-link {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #0077b5;
-      color: #fff;
-      border-radius: 5px;
-    }
-    .resume-link:hover {
-      background: #005f8b;
+    
+    .achievement-title {
+      font-weight: bold;
+      margin-bottom: 5px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Dushyant Srivastava</h1>
-    <p>Salesforce Developer | Technical Architect</p>
-    <p>Mobile: +91-8224948060 | Email: <a href="mailto:dushyant.srivastava21@gmail.com" style="color:#fff">dushyant.srivastava21@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/dushyant-srivastava" target="_blank" style="color:#fff">https://www.linkedin.com/in/dushyant-srivastava</a></p>
-  </header>
+  <div class="header">
+    <div class="profile-info">
+      <h1>DUSHYANT SRIVASTAVA</h1>
+      <div class="job-title">Salesforce Technical Architect</div>
+      <div class="contact-info">
+        <div>📞 +91-8224948060</div>
+        <div>📧 dushyant.srivastava21@gmail.com</div>
+        <div>🔗 https://linkedin.com/in/dushyant-srivastava</div>
+        <div>📍 Noida, India</div>
+      </div>
+    </div>
+    <div class="profile-image">DS</div>
+  </div>
+  
+  <div class="two-columns">
+    <div class="left-column">
+      <div class="section">
+        <h2 class="section-title">SUMMARY</h2>
+        <p class="summary-text">
+          I am a Salesforce Technical Architect with 9 years of experience in designing and implementing scalable Salesforce solutions. My expertise lies in Sales Cloud, Service Cloud, Experience Cloud, Omnistudio, and Integration. I have a proven ability to lead teams, conduct Proof of Concepts, and drive enterprise-level digital transformation, recognized for my contributions with the Achievers Award
+        </p>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">EXPERIENCE</h2>
+        <div>
+          <h3 class="job-title-experience">Sr. Technical Consultant</h3>
+          <div class="company">Salesforce</div>
+          <div class="date">📅 04/2022 - Present</div>
+          <p class="job-description">
+            Salesforce is a cloud-based software company that provides customer relationship management services
+          </p>
+          <ul>
+            <li>Led the architectural design and implementation for large-scale Salesforce solutions</li>
+            <li>Created Technical designs and best practices for scalable, high-performing systems</li>
+            <li>Performed Proof of Concepts (POCs) for challenging technical requirements</li>
+            <li>Mentored and guided cross-functional teams, ensuring best practices in Salesforce development and integration</li>
+            <li>Defined and implemented best practices, performing code reviews and ensuring adherence to Salesforce architectural standards</li>
+            <li>Coordinated CI/CD deployments, reducing release cycle time by 20%</li>
+            <li>Key Projects: Connect Now (Australia) – Optimized customer onboarding and improved Digital Funnel efficiency, AGL (Australia) – Developed and streamlined Salesforce integration strategies for energy sector operations</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">PROJECTS</h2>
+        <div>
+          <h3 class="job-title-experience">Various</h3>
+          <p class="job-description">
+            Various projects leading to significant improvements in processes and integrations
+          </p>
+          <ul>
+            <li>Designed and implemented an automated contract and order management system, reducing processing time by 40%</li>
+            <li>Led API integrations with billing and ERP systems, ensuring high data integrity and scalability</li>
+            <li>Refactored legacy code, optimizing platform performance by 25%</li>
+            <li>Mentored junior developers, boosting team productivity and ensuring development best practices</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">EDUCATION</h2>
+        <div>
+          <h3 class="education-title">Bachelor of Engineering</h3>
+          <div class="university">Rajiv Gandhi Proudyogiki Vishwavidyalaya, Indore Institute of Science & Technology</div>
+          <div class="date">📅 08/2012 - 05/2016</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="right-column">
+      <div class="section">
+        <h2 class="section-title">SKILLS</h2>
+        <div class="skills-container">
+          <div class="skill">Agile</div>
+          <div class="skill">Apex</div>
+          <div class="skill">AWS</div>
+          <div class="skill">Azure</div>
+          <div class="skill">Confluence</div>
+          <div class="skill">CPQ</div>
+          <div class="skill">ERP</div>
+          <div class="skill">ETL</div>
+          <div class="skill">GCP</div>
+          <div class="skill">Git</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Jenkins</div>
+          <div class="skill">JIRA</div>
+          <div class="skill">Middleware</div>
+          <div class="skill">REST</div>
+          <div class="skill">Salesforce</div>
+          <div class="skill">Scrum</div>
+          <div class="skill">Service Cloud</div>
+          <div class="skill">Soap</div>
+          <div class="skill">SOQL</div>
+          <div class="skill">SOSL</div>
+          <div class="skill">Visualforce</div>
+          <div class="skill">SOAP API</div>
+          <div class="skill">Gmail</div>
+          <div class="skill">Batch</div>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">CERTIFICATION</h2>
+        <div class="certification">Salesforce Certified Administrator</div>
+        <div class="certification">Salesforce Certified Platform Developer I</div>
+        <div class="certification">Salesforce Certified Platform Developer II</div>
+        <div class="certification">Salesforce Certified App Builder</div>
+        <div class="certification">Salesforce Certified Sales Cloud Consultant</div>
+        <div class="certification">Salesforce Certified Service Cloud Consultant</div>
+        <div class="certification">Salesforce Certified JavaScript Developer - I</div>
+        <div class="certification">Salesforce Certified Experience Cloud Consultant</div>
+        <div class="certification">Salesforce Certified Omnistudio Developer</div>
+        <div class="certification">Industries CPQ Developer</div>
+        <div class="certification">Manufacturing Cloud Accredited Professional</div>
+        <div class="certification">Salesforce Certified Data Architect</div>
+        <div class="certification">Salesforce Certified Sharing and Visibility Designer</div>
+        <div class="certification">Salesforce Certified Application Architect</div>
+        <div class="certification">Salesforce Certified System Architect</div>
+        <div class="certification">Salesforce Certified AI Associate</div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">KEY ACHIEVEMENTS</h2>
+        <div class="achievement">
+          <div class="achievement-icon">🏆</div>
+          <div class="achievement-text">
+            <div class="achievement-title">Achievers Award</div>
+            <div>Recognized with the Achievers Award for outstanding contributions in the field of Salesforce solutions and digital transformation</div>
+          </div>
+        </div>
+      </div>
 
-  <div class="container">
-    <section id="summary">
-      <h2>Professional Summary</h2>
-      <p>
-        Principal Salesforce Developer with 8+ years of experience in designing, developing, and optimizing scalable Salesforce solutions. Expertise in Apex, Lightning Web Components (LWC), and complex API integrations. Proven ability to lead development teams, implement automation solutions, and drive process efficiencies. Adept at delivering high-impact solutions for business process automation, contract lifecycle management, and subscription management. Certified Salesforce Application Architect with extensive experience in Agile/Scrum methodologies.
-      </p>
-    </section>
-
-    <section id="experience">
-      <h2>Professional Experience</h2>
-      <ul>
-        <li>
-          <strong>Sr. Technical Consultant | Salesforce</strong> (April 2022 – Present)<br>
-          - Led the architecture and development of Salesforce solutions for process automation, improving system efficiency by 30%.<br>
-          - Designed and integrated complex API solutions, ensuring seamless data flow across multi-cloud and third-party platforms.<br>
-          - Developed scalable solutions using Apex, Visualforce, Flow, and Lightning Web Components (LWC).<br>
-          - Defined and implemented best practices, performing code reviews and ensuring adherence to Salesforce architectural standards.<br>
-          - Mentored junior developers, increasing team efficiency and technical proficiency.<br>
-          - Coordinated CI/CD deployments, reducing release cycle time by 20%.
-        </li>
-        <li>
-          <strong>Consultant | Deloitte</strong> (August 2021 – April 2022)<br>
-          - Delivered Salesforce solutions aligning with best practices, enhancing automation and scalability.<br>
-          - Collaborated with business stakeholders to translate business requirements into technical solutions.<br>
-          - Designed system roadmaps and implemented scalable solutions using Salesforce Sales Cloud, Service Cloud, and CPQ.<br>
-          - Worked with cross-functional teams to manage dependencies and ensure seamless integrations.
-        </li>
-        <li>
-          <strong>Senior Software Engineer | Algoworks Pvt. Ltd.</strong> (January 2020 – August 2021)<br>
-          - Led Salesforce implementation projects, optimizing contract and order automation workflows.<br>
-          - Enhanced system performance by refactoring code and optimizing queries.<br>
-          - Implemented enterprise-level integrations with ERP and billing systems, ensuring data integrity.
-        </li>
-        <li>
-          <strong>Software Engineer | SaasFocus – A Cognizant Company</strong> (March 2019 – January 2020)<br>
-          - Designed and implemented Salesforce customizations, increasing system reliability and user adoption.<br>
-          - Built reusable components in LWC to improve UI/UX across Salesforce applications.
-        </li>
-        <li>
-          <strong>Software Developer | 360 Degree Cloud Technologies</strong> (September 2016 – February 2019)<br>
-          - Developed Apex triggers, workflows, and Lightning Components for process automation.<br>
-          - Conducted code reviews and optimized performance by reducing SOQL queries and implementing best practices.
-        </li>
-      </ul>
-    </section>
-
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Salesforce Certified Platform Developer I & II</li>
-        <li>Salesforce Certified Administrator</li>
-        <li>Salesforce Certified Application Architect</li>
-        <li>Salesforce Certified System Architect</li>
-        <li>Salesforce Certified App Builder</li>
-      </ul>
-    </section>
-
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Salesforce Development:</strong> Apex, Visualforce, Lightning Components (LWC), Triggers, Batch, Schedulers</li>
-        <li><strong>Automation & Configuration:</strong> Flows, Process Builder, Workflows, Custom Metadata</li>
-        <li><strong>Integration:</strong> Salesforce REST API, SOAP API, Bulk API, Middleware, Connectors</li>
-        <li><strong>Data Management:</strong> ETL Processes, Data Migration, SOQL, SOSL</li>
-        <li><strong>Deployment & CI/CD:</strong> Version Control, Git, Copado, Jenkins, SFDX</li>
-        <li><strong>Security & Access Control:</strong> Profiles, Roles, Permission Sets, Sharing Rules</li>
-        <li><strong>Agile/Scrum:</strong> Jira, Confluence, Sprint Planning, Stand-ups</li>
-        <li><strong>Cloud Platforms:</strong> AWS, Azure, GCP (Google Cloud Platform) Integration with Salesforce</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects & Achievements</h2>
-      <ul>
-        <li><strong>Hyperscaler Process Automation:</strong> Designed and implemented an automated contract and order management system, reducing processing time by 40%.</li>
-        <li><strong>API & Integration Strategy:</strong> Led API integrations with billing and ERP systems, ensuring high data integrity and scalability.</li>
-        <li><strong>Performance Optimization:</strong> Refactored legacy code, optimizing platform performance by 25%.</li>
-        <li><strong>Team Leadership:</strong> Mentored junior developers, boosting team productivity and ensuring development best practices.</li>
-      </ul>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Bachelor of Engineering</strong><br>
-          Rajiv Gandhi Proudyogiki Vishwavidyalaya, Indore Institute of Science & Technology (2012-2016)
-        </li>
-      </ul>
-    </section>
-
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>Download my resume for more details:</p>
-      <a href="path/to/your/resume.pdf" class="resume-link" download>Download Resume</a>
-    </section>
+      <div class="section">
+      <h2 class="section-title">Download Resume</h2>
+        <a href="path/to/your/resume.pdf" class="resume-link" download>Download Resume</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
