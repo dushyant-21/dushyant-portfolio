@@ -215,15 +215,87 @@
       font-weight: bold;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       cursor: pointer;
+      z-index: 1000;
     }
     
     .download-button:hover {
       background-color: #1c6bdf;
     }
     
+    /* Improved Print styles for better PDF download */
     @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm;
+      }
+      
+      html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        padding: 15mm;
+        max-width: none;
+      }
+      
+      * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      
       .download-button {
         display: none !important;
+      }
+      
+      .two-columns {
+        display: flex !important;
+        width: 100% !important;
+        page-break-inside: avoid;
+      }
+      
+      .left-column {
+        flex: 6 !important;
+        padding-right: 20px;
+      }
+      
+      .right-column {
+        flex: 4 !important;
+      }
+      
+      .section {
+        page-break-inside: avoid;
+      }
+      
+      .skill {
+        background-color: #f5f5f5 !important;
+        display: inline-block !important;
+        page-break-inside: avoid;
+      }
+      
+      .profile-image {
+        background-color: #2e86ff !important;
+        color: white !important;
+        print-color-adjust: exact;
+      }
+      
+      .job-title,
+      .company,
+      .university,
+      .certification,
+      .achievement-icon {
+        color: #2e86ff !important;
+      }
+      
+      .section-title {
+        border-bottom: 2px solid #000 !important;
+      }
+      
+      li {
+        page-break-inside: avoid;
       }
     }
   </style>
